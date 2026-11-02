@@ -1,0 +1,19 @@
+{
+  "collections": [
+    {
+      "id": "col_001",
+      "title": "Электроника",
+      "items_count": 24
+    },
+    {
+      "id": "col_002",
+      "title": "Одежда",
+      "items_count": 18
+    },
+    {
+      "id": "col_003",
+      "title": "Аксессуары",
+      "items_count": 12
+    }
+  ]
+}
