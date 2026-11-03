@@ -42,3 +42,55 @@
   border: 2px solid rgba(16, 227, 255, 0.7254901961);
   border-radius: 20px;
 }
+.work_place .main .main_image {
+  width: 250px;
+  height: 250px;
+}
+.work_place .main .main_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+.work_place .main .main_text .main_h1 {
+  font-size: 36px;
+}
+.work_place .main .main_text .main_h2 {
+  font-size: 14px;
+  line-height: 8px;
+}
+.work_place .main .start_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 40px;
+  gap: 30px;
+}
+.work_place .main .start_buttons button {
+  width: 200px;
+  height: 36px;
+  background-color: rgba(16, 227, 255, 0.4509803922);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
