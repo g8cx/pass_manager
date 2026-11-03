@@ -138,6 +138,38 @@
   width: 20px;
   height: 20px;
 }
+.sidebar .main_data .collections .collections_list {
+  position: relative;
+  min-height: 0;
+}
+.sidebar .main_data .collections .collections_list::before, .sidebar .main_data .collections .collections_list::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 8px;
+  height: 25px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.sidebar .main_data .collections .collections_list::before {
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#191D21), to(transparent));
+  background: linear-gradient(to bottom, #191D21, transparent);
+}
+.sidebar .main_data .collections .collections_list::after {
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#191D21), to(transparent));
+  background: linear-gradient(to top, #191D21, transparent);
+}
+.sidebar .main_data .collections .collections_list.has-content-above::before {
+  opacity: 1;
+}
+.sidebar .main_data .collections .collections_list.has-content-below::after {
+  opacity: 1;
+}
 .sidebar .main_data .collections .collections_navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,6 +178,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0 0 15px 8px;
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -185,6 +218,20 @@
       -ms-flex-align: start;
           align-items: start;
   padding-right: 12px;
+  -webkit-transform: scale(var(--item-scale, 0.9));
+          transform: scale(var(--item-scale, 0.9));
+  opacity: var(--item-opacity, 0.7);
+  -webkit-transition: opacity 0.12s ease-out, -webkit-transform 0.12s ease-out;
+  transition: opacity 0.12s ease-out, -webkit-transform 0.12s ease-out;
+  transition: transform 0.12s ease-out, opacity 0.12s ease-out;
+  transition: transform 0.12s ease-out, opacity 0.12s ease-out, -webkit-transform 0.12s ease-out;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  will-change: transform;
+}
+.sidebar .main_data .collections .collections_navigation li.is-centered {
+  -webkit-filter: drop-shadow(0 2px 5px rgba(16, 227, 255, 0.2078431373));
+          filter: drop-shadow(0 2px 5px rgba(16, 227, 255, 0.2078431373));
 }
 .sidebar .main_data .collections .collections_navigation .collection_a {
   display: -webkit-box;

@@ -81,9 +81,42 @@
             width: 20px
             height: 20px
 
+      .collections_list
+        position: relative
+        min-height: 0
+
+        &::before,
+        &::after
+          content: ""
+          position: absolute
+          left: 0
+          right: 8px
+          height: 25px
+          z-index: 2
+          pointer-events: none
+          opacity: 0
+          transition: opacity 0.2s ease
+
+        // Тень сверху
+        &::before
+          top: 0
+          background: linear-gradient(to bottom, #191D21, transparent)
+
+        // Тень снизу
+        &::after
+          bottom: 0
+          background: linear-gradient(to top, #191D21, transparent)
+
+        &.has-content-above::before
+          opacity: 1
+
+        &.has-content-below::after
+          opacity: 1
+
       .collections_navigation
         display: flex
         flex-direction: column
+        padding: 0 0 15px 8px
         max-height: 300px
         overflow-y: auto
         overflow-x: hidden
@@ -116,6 +149,15 @@
           justify-content: space-between
           align-items: start
           padding-right: 12px
+          // Эффект барабана
+          transform: scale(var(--item-scale, 0.9))
+          opacity: var(--item-opacity, 0.7)
+          transition: transform 0.12s ease-out, opacity 0.12s ease-out
+          transform-origin: center center
+          will-change: transform
+
+          &.is-centered
+            filter: drop-shadow(0 2px 5px #10e3ff35)
 
         .collection_a
           display: flex
