@@ -22,20 +22,35 @@ async function load_collections() {
       navigation.innerHTML = '';
 
       data.collections.forEach(collection => { // Проходимся внутри JSON и генерируем html тэги
+          // Media materials
+          const image = "../media/many_dots.png"
 
+          // HTML elements
           const li = document.createElement('li');
-          const coll_div = document.createElement('div')
+          const coll_a = document.createElement('a')
           const coll_img = document.createElement('img');
           const coll_name = document.createElement('span');
+          const coll_settings = document.createElement('button')
+          const setting_image = document.createElement('img')
 
           li.id = `/collections/${encodeURIComponent(collection.id)}`;
+          // Div для коллекции
+          coll_a.href = "./"
+          coll_a.className = 'collection_a'
+          // Картинка коллекции
           coll_img.src = '../media/coll_img.png'
+          coll_img.className = 'collection_image' 
+          // Название коллекции
           coll_name.textContent = collection.title;
-
-          li.appendChild(coll_div);
-          coll_div.appendChild(coll_img);
-          coll_div.appendChild(coll_name);
+          // Кнопка настроек у коллекции
+          coll_settings.className = 'collection_setting'
+          // Картинка для кнопки настроек
+          setting_image.src = `${image}`
+          
           navigation.appendChild(li);
+          li.append(coll_a, coll_settings);
+          coll_a.append(coll_img, coll_name);
+          coll_settings.appendChild(setting_image);
 
       });
 

@@ -4,28 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="../js/load_collections.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Pacifico&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/css/styles.css">
+  <link rel="stylesheet" href="../styles/css/sidebar.css">
+  <link rel="stylesheet" href="../styles/css/work_place.css">
   <title>Document</title>
 </head>
 <body>
-  <div class="sidebar">
-    <div class="account_data">
-      <img data-img="" src="" alt=""> <!-- TODO:Зделать это как кнопку -->
-      <div class="user_title">
-        <p data-user="user.name"></p>
-        <p data-user="user.email"></p>
-      </div>
+  <section class="sidebar">
+    <section class="main_data">
+      <section class="account_data">
+        <div class="user_image">
+          <img data-img="" src="../media/user.png" alt=""> <!-- TODO: Cделать это как кнопку -->
+        </div>
+        <div class="user_title">
+          <p data-user="user.name">ivan1137</p>
+          <p data-user="user.email">ivan1137@gmail.com</p>
+        </div>
+      </section>
+
+      <section class="funtional_btn">
+        <a class="func" href="./">
+          <img src="../media/start.png" alt="">
+          <span>Get started</span>
+        </a>
+        <a class="func" href="./">
+          <img src="../media/search.png" alt="">
+          <span>Search</span>
+        </a>
+        <a class="func" href="./">
+          <img src="../media/notifications.png" alt="">
+          <span>Notifications</span>
+        </a>
+        <a class="func" href="./">
+          <img src="../media/login.png" alt="">
+          <span>Logins</span>
+        </a>
+      </section>
+
+      <section class="collections">
+        <div class="collection_title_block">
+          <span class="collection_title">COLLECTIONS</span>
+          <button><img src="../media/plus.png" alt=""></button>
+        </div>
+        <nav>
+          <ul id="collections_navigation" class="collections_navigation">
+          </ul>
+        </nav>
+      </section>
+
+      <div class="settings_line"></div>
+
+      <section class="settings_btn">
+        <a href="./">
+          <img src="../media/settings.png" alt="">
+          <span>Settings</span>
+        </a>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <div class="settings_line"></div>
+      <span>© ProfitEaters 2026</span>  
+    </footer>
+  </section>
+
+
+  <section class="work_place">
+    <header class="header">Logins</header>
+    <div class="main">
+      <span>Основное окно</span>
+      <span>текст должен быть по центру контейнера</span>
     </div>
-    
-    <div class="collections">
-      <nav>
-        <ul id="collections_navigation">
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="work_place">
-    <header data-header="page.header"></header>
-    <div class="main"></div>
-  </div>
+  </section>
 </body>
 </html>
