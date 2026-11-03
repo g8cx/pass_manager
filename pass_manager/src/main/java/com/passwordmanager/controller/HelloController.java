@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.passwordmanager.dto.LoginRequest;
+import com.passwordmanager.service.LoginService;
+import com.passwordmanager.model.PasswordEntry;
+import com.passwordmanager.dto.CreatePasswordEntryRequest;
+import jakarta.validation.Valid;
 
 @RestController
 public class HelloController {
@@ -20,10 +24,25 @@ public class HelloController {
         return new ApiStatusResponse("Password Manager","running", "1.0", "test");
     }
 
-    @PostMapping("/logins")
-    public LoginRequest logins(@RequestBody LoginRequest request){
-        return request;
+    private final LoginService loginService;
+
+    public HelloController(LoginService loginService){
+        this.loginService = loginService;
     }
 
+    @PostMapping("/logins")
+    public LoginRequest logins(@RequestBody LoginRequest request){
+        return loginService.createLogin(request);
+    }
+
+    @GetMapping("/test-entry")
+    public PasswordEntry testEntry(){
+        return loginService.createTestEntry();
+    }
+
+    @PostMapping("/entries")
+    public PasswordEntry createPasswordEntry(@Valid @RequestBody CreatePasswordEntryRequest request){
+        return loginService.createPasswordEntry(request);
+    }
 
 }
