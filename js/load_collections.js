@@ -27,6 +27,7 @@ async function load_collections() {
 
           // HTML elements
           const li = document.createElement('li');
+          const coll_content = document.createElement('div');
           const coll_a = document.createElement('a')
           const coll_img = document.createElement('img');
           const coll_name = document.createElement('span');
@@ -34,8 +35,10 @@ async function load_collections() {
           const setting_image = document.createElement('img')
 
           li.id = `/collections/${encodeURIComponent(collection.id)}`;
-          li.className = 'tab_btn'
-          // Div для коллекции
+          li.className = 'tab_btn collection_btn_effects'
+          // Div коллекции
+          coll_content.className = 'collection_content';
+          // <a> коллекции
           // coll_a.href = ""
           coll_a.className = 'collection_a'
           // Картинка коллекции
@@ -49,7 +52,8 @@ async function load_collections() {
           setting_image.src = `${image}`
           
           navigation.appendChild(li);
-          li.append(coll_a, coll_settings);
+          li.appendChild(coll_content);
+          coll_content.append(coll_a, coll_settings);
           coll_a.append(coll_img, coll_name);
           coll_settings.appendChild(setting_image);
 

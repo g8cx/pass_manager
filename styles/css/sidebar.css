@@ -53,6 +53,10 @@
   border-radius: 10px;
   background-color: #272727;
 }
+.sidebar .main_data .account_data .user_title .user_email {
+  font-size: 12px;
+  color: #c0c0c0;
+}
 .sidebar .main_data .funtional_btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,7 +87,8 @@
 .sidebar .main_data .funtional_btn .func.active {
   background: rgba(124, 124, 124, 0.4784313725);
   color: #dcfaf7;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: none;
 }
 .sidebar .main_data .funtional_btn .func img {
   width: 20px;
@@ -215,6 +220,28 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 12px;
+}
+.sidebar .main_data .collections .collections_navigation li.is-centered {
+  -webkit-filter: drop-shadow(0 2px 5px rgba(0, 143, 161, 0.2078431373));
+          filter: drop-shadow(0 2px 5px rgba(0, 143, 161, 0.2078431373));
+}
+.sidebar .main_data .collections .collections_navigation li.active {
+  background: rgba(124, 124, 124, 0.3058823529);
+  color: #dcfaf7;
+  border: none;
+  border-radius: 10px;
+}
+.sidebar .main_data .collections .collections_navigation li .collection_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -225,7 +252,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 12px;
+  width: 100%;
+  gap: 10px;
   -webkit-transform: scale(var(--item-scale, 0.9));
           transform: scale(var(--item-scale, 0.9));
   opacity: var(--item-opacity, 0.7);
@@ -237,16 +265,7 @@
           transform-origin: center center;
   will-change: transform;
 }
-.sidebar .main_data .collections .collections_navigation li.is-centered {
-  -webkit-filter: drop-shadow(0 2px 5px rgba(16, 227, 255, 0.2078431373));
-          filter: drop-shadow(0 2px 5px rgba(16, 227, 255, 0.2078431373));
-}
-.sidebar .main_data .collections .collections_navigation li.active {
-  background: rgba(124, 124, 124, 0.4784313725);
-  color: #dcfaf7;
-  border-radius: 10px;
-}
-.sidebar .main_data .collections .collections_navigation .collection_a {
+.sidebar .main_data .collections .collections_navigation li .collection_content .collection_a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,19 +280,18 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
-  padding-right: 10px;
 }
-.sidebar .main_data .collections .collections_navigation .collection_a .collection_image {
+.sidebar .main_data .collections .collections_navigation li .collection_content .collection_a .collection_image {
   width: 20px;
   height: 20px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-.sidebar .main_data .collections .collections_navigation .collection_setting {
+.sidebar .main_data .collections .collections_navigation li .collection_content .collection_setting {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,7 +306,7 @@
   font-size: 25px;
   cursor: pointer;
 }
-.sidebar .main_data .collections .collections_navigation .collection_setting img {
+.sidebar .main_data .collections .collections_navigation li .collection_content .collection_setting img {
   width: 30px;
   height: 30px;
 }
@@ -336,4 +354,20 @@
   margin: 20px 0;
   border-radius: 10px;
   background-color: #33393E;
+}
+
+.btn_effects {
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+.btn_effects:hover {
+  border-color: rgba(0, 190, 254, 0.6);
+}
+
+.collection_btn_effects {
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+.collection_btn_effects:hover {
+  border-color: #c0c0c0;
 }
