@@ -4,9 +4,14 @@ import com.passwordmanager.dto.CreatePasswordEntryRequest;
 import com.passwordmanager.dto.LoginRequest;
 import org.springframework.stereotype.Service;
 import com.passwordmanager.model.PasswordEntry;
+import com.passwordmanager.repository.PasswordEntryRepository;
 
 @Service
 public class LoginService {
+    private final PasswordEntryRepository passwordEntryRepository;
+    public LoginService(PasswordEntryRepository passwordEntryRepository){
+        this.passwordEntryRepository = passwordEntryRepository;
+    }
     public LoginRequest createLogin(LoginRequest request){
         return request;
     }
@@ -24,6 +29,6 @@ public class LoginService {
                 request.getEncryptedPassword(),
                 request.getNotes()
         );
-        return entry;
+        return passwordEntryRepository.save(entry);
     }
 }

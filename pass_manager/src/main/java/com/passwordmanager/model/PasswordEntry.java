@@ -1,11 +1,24 @@
 package com.passwordmanager.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+@Entity
 public class PasswordEntry{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String title;
     private String website;
     private String username;
     private String encryptedPassword;
     private String notes;
+
+    protected PasswordEntry(){
+
+    }
 
     public PasswordEntry(String title, String website, String username, String encryptedPassword, String notes){
         this.title = title;
