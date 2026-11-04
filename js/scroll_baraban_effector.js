@@ -39,6 +39,8 @@ function updateWheelEffect() {
             opacity = 1 - normalizedDistance * 0.35;
         }
 
+        // console.log(scale, opacity)
+
         item.style.setProperty('--item-scale', scale);
         item.style.setProperty('--item-opacity', opacity);
 

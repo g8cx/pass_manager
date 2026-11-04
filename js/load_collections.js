@@ -34,8 +34,9 @@ async function load_collections() {
           const setting_image = document.createElement('img')
 
           li.id = `/collections/${encodeURIComponent(collection.id)}`;
+          li.className = 'tab_btn'
           // Div для коллекции
-          coll_a.href = "./"
+          // coll_a.href = ""
           coll_a.className = 'collection_a'
           // Картинка коллекции
           coll_img.src = '../media/coll_img.png'

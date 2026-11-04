@@ -32,14 +32,22 @@
     .funtional_btn
       display: flex
       flex-direction: column
-      gap: 18px
+      gap: 10px
       margin-bottom: 25px
 
       .func
         display: flex
         flex-direction: row
         align-items: center
+        min-height: 30px
+        height: auto
+        padding-left: 8px
         gap: 8px
+
+        &.active
+            background: #7C7C7C7A
+            color: #dcfaf7
+            border-radius: 5px
 
         img
           width: 20px
@@ -147,8 +155,8 @@
           display: flex
           flex-direction: row
           justify-content: space-between
-          align-items: start
-          padding-right: 12px
+          align-items: center
+          padding: 0 12px
           // Эффект барабана
           transform: scale(var(--item-scale, 0.9))
           opacity: var(--item-opacity, 0.7)
@@ -158,6 +166,11 @@
 
           &.is-centered
             filter: drop-shadow(0 2px 5px #10e3ff35)
+
+          &.active
+            background: #7C7C7C7A
+            color: #dcfaf7
+            border-radius: 10px
 
         .collection_a
           display: flex
