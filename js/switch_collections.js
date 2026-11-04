@@ -1,8 +1,8 @@
 (() => {
-    // const navigation = document.querySelector('#collections_navigation');
     const sidebar = document.querySelector('.sidebar')
+    const defaultTemp = document.querySelector('#active')
 
-    let temp = null;
+    let temp = defaultTemp;
 
     sidebar.addEventListener('click', (event) => {
         const button = event.target.closest('.tab_btn');
@@ -10,15 +10,15 @@
         console.log(event.target)
 
         if (!button || !sidebar.contains(button)) {
-            return;
+          return;
         }
 
         if (event.target.closest('.collection_setting')) {
-            return;
+          return;
         }
 
         if (temp !== null) {
-            temp.classList.remove('active');
+          temp.classList.remove('active');
         }
 
         button.classList.add('active');
