@@ -40,9 +40,4 @@ public class HelloController {
         return loginService.createTestEntry();
     }
 
-    @PostMapping("/entries")
-    public PasswordEntry createPasswordEntry(@Valid @RequestBody CreatePasswordEntryRequest request){
-        return loginService.createPasswordEntry(request);
-    }
-
 }
