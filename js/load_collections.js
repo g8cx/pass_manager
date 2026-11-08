@@ -22,6 +22,9 @@ async function load_collections() {
       navigation.innerHTML = '';
 
       data.collections.forEach(collection => { // Проходимся внутри JSON и генерируем html тэги
+        // const Attributes
+        const iconViewSize = 24
+
         // HTML elements
         const li = document.createElement('li');
         const coll_content = document.createElement('div');
@@ -58,9 +61,9 @@ async function load_collections() {
 
         // SVG настройки
         setting_image.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-        setting_image.setAttribute('width', '24');
-        setting_image.setAttribute('height', '24');
-        setting_image.setAttribute('viewBox', '0 0 24 24');
+        setting_image.setAttribute('width', `${iconViewSize}`);
+        setting_image.setAttribute('height', `${iconViewSize}`);
+        setting_image.setAttribute('viewBox', `0 0 ${iconViewSize} ${iconViewSize}`);
         setting_image.setAttribute('fill', 'none');
         setting_image.setAttribute('stroke', 'currentColor');
         setting_image.setAttribute('stroke-width', '2');

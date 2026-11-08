@@ -89,8 +89,11 @@
 .work_place .main .start_buttons button {
   width: 200px;
   height: 36px;
-  background-color: rgba(16, 227, 255, 0.4509803922);
+  background-color: rgba(16, 227, 255, 0.7254901961);
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+.work_place .main .start_buttons button:hover {
+  background-color: rgba(16, 227, 255, 0.9607843137);
 }

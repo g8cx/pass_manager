@@ -1,3 +1,5 @@
+@use 'variables' as v
+  
 .sidebar
   display: flex
   flex-direction: column
@@ -26,12 +28,12 @@
         width: 40px
         height: 40px
         border-radius: 10px
-        background-color: #272727
+        background-color: v.$backgound-workplace-dark
 
       .user_title
         .user_email
           font-size: 12px
-          color: #c0c0c0
+          color: v.$text-additional-color-dark
 
     // Функциональные кнопки
     .funtional_btn
@@ -50,8 +52,7 @@
         gap: 8px
 
         &.active
-            background: #7C7C7C7A
-            color: #dcfaf7
+            background: v.$button-active-dark
             border-radius: 10px
             border: none
 
@@ -86,7 +87,7 @@
           display: flex
           justify-content: center
           flex: 1
-          color: #c0c0c0
+          color: v.$text-additional-color-dark
 
         button
           cursor: pointer
@@ -114,12 +115,12 @@
         // Тень сверху
         &::before
           top: 0
-          background: linear-gradient(to bottom, #191D21, transparent)
+          background: linear-gradient(to bottom, v.$background-dark, transparent)
 
         // Тень снизу
         &::after
           bottom: 0
-          background: linear-gradient(to top, #191D21, transparent)
+          background: linear-gradient(to top, v.$background-dark, transparent)
 
         &.has-content-above::before
           opacity: 1
@@ -142,14 +143,14 @@
           width: 8px
 
         &::-webkit-scrollbar-track
-          background: #191D21
+          background: v.$background-dark
 
         &::-webkit-scrollbar-thumb
-          background: #10e3ffb9
+          background: v.$accent-color-dark
           border-radius: 10px
 
         &::-webkit-scrollbar-thumb:hover
-          background: #10e3fff5
+          background: v.$accent-color-hover-dark
 
         &::-webkit-scrollbar-button
           display: none
@@ -164,11 +165,10 @@
           padding: 5px 12px
 
           &.is-centered
-            filter: drop-shadow(0 2px 5px #008fa135)
+            filter: drop-shadow(0 2px 5px v.$baraban-shadowdrop-dark)
 
           &.active
-            background: #7c7c7c4e
-            color: #dcfaf7
+            background: v.$button-active-dark
             border: none
             border-radius: 10px
         
@@ -218,19 +218,23 @@
       height: 3px
       margin: 20px 0
       border-radius: 10px
-      background-color: #33393E
+      background-color: v.$button-active-dark
 
     .settings_btn
+      min-height: 30px
+      height: auto
       a
+        padding-left: 8px
         display: flex
         justify-content: start
         align-items: center
+        height: 100%
         gap: 10px
 
-        // &.active
-        // background: #7C7C7C7A
-        // color: #dcfaf7
-        // border-radius: 10px
+        &.active
+          background: v.$button-active-dark
+          border-radius: 10px
+          border: none
         
         img
           width: 20px
@@ -248,17 +252,17 @@
       height: 3px
       margin: 20px 0
       border-radius: 10px
-      background-color: #33393E
+      background-color: v.$button-active-dark
 
 // Эффекты кнопок
 .btn_effects
   border: 2px solid transparent
   border-radius: 10px
   &:hover
-    border-color: #00befe99
+    border-color: v.$button-hover-dark
 
 .collection_btn_effects
   border: 2px solid transparent
   border-radius: 10px
   &:hover
-    border-color:#c0c0c0
+    border-color: v.$button-hover-dark

@@ -1,3 +1,5 @@
+@use 'variables' as v
+  
 .work_place
   display: flex
   flex-direction: column
@@ -19,8 +21,8 @@
     flex: 1
     min-width: 0
     min-height: 0
-    background-color: #21252999
-    border: 2px solid #10e3ffb9
+    background-color: v.$workplace-backgound-dark
+    border: 2px solid v.$accent-color-dark
     border-radius: 20px
 
     .main_image
@@ -52,7 +54,9 @@
       button
         width: 200px
         height: 36px
-        background-color: #10E3FF73
+        background-color: v.$accent-color-dark
         border: none
         border-radius: 6px
         cursor: pointer
+        &:hover
+          background-color: v.$accent-color-hover-dark

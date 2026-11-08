@@ -1,9 +1,11 @@
+@use 'variables' as v
+
 *
   box-sizing: border-box
   margin: 0
   padding: 0
   font-family: "Sansation", sans-serif
-  color: #fff
+  color: v.$text-color-dark
   body
     margin: 0
     padding: 40px 70px 50px 14px
@@ -14,9 +16,9 @@
     height: 100dvh
     gap: 45px
     overflow: hidden
-    background-color: #191D21
+    background-color: v.$background-dark
   a
     cursor: pointer
     text-decoration: none
-    color: #fff
+    color: v.$text-color-dark
     -webkit-user-drag: none
