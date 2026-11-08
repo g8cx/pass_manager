@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,36 +13,36 @@
   <link rel="stylesheet" href="../styles/css/styles.css">
   <link rel="stylesheet" href="../styles/css/sidebar.css">
   <link rel="stylesheet" href="../styles/css/work_place.css">
-  <title>Document</title>
+  <title>ProfitPassManager</title>
 </head>
 <body>
   <section class="sidebar">
     <section class="main_data">
       <section class="account_data">
         <div class="user_image">
-          <img data-img="" src="../media/user.png" alt="">
+          <img data-img="" src="../assets/images/user.png" alt="">
         </div>
         <div class="user_title">
-          <p data-user="user.name" class="user_name">ivan1137</p> <!-- Сюда вставлять данные юзера -->
-          <p data-user="user.email" class="user_email">ivan1137@gmail.com</p> <!-- Сюда вставлять данные юзера -->
+          <p data-user="user.name" class="user_name">ivan1137</p>
+          <p data-user="user.email" class="user_email">ivan1137@gmail.com</p>
         </div>
       </section>
 
       <section class="funtional_btn">
         <a class="func tab_btn btn_effects">
-          <img src="../media/start.png" alt="">
+          <img src="../assets/images/start.png" alt="">
           <span>Get started</span>
         </a>
         <a class="func tab_btn btn_effects">
-          <img src="../media/search.png" alt="">
+          <img src="../assets/images/search.png" alt="">
           <span>Search</span>
         </a>
         <a class="func tab_btn btn_effects">
-          <img src="../media/notifications.png" alt="">
+          <img src="../assets/images/notifications.png" alt="">
           <span>Notifications</span>
         </a>
         <a id="active" class="func tab_btn btn_effects active">
-          <img src="../media/login.png" alt="">
+          <img src="../assets/images/login.png" alt="">
           <span>Logins</span>
         </a>
       </section>
@@ -50,7 +50,19 @@
       <section class="collections">
         <div class="collection_title_block">
           <span class="collection_title">COLLECTIONS</span>
-          <button><img src="../media/plus.png" alt=""></button>
+          <button>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-plus preview-icon"
+            >
+              <path d="M5 12h14"/>
+              <path d="M12 5v14"/>
+            </svg>
+            <!-- <img src="../assets/icons/plus.svg" alt=""> -->
+          </button>
         </div>
         <nav>
           <div class="collections_list">
@@ -64,7 +76,7 @@
 
       <section class="settings_btn">
         <a class="tab_btn btn_effects">
-          <img src="../media/settings.png" alt="">
+          <img src="../assets/images/settings.png" alt="">
           <span>Settings</span>
         </a>
       </section>
@@ -80,7 +92,7 @@
   <section class="work_place">
     <header class="header">Logins</header>
     <div class="main">
-      <img src="../media/add_login.png" alt="" class="main_image">
+      <img src="../assets/images/add_login.png" alt="" class="main_image">
       <div class="main_text">
         <span class="main_h1">Starting adding logins</span>
         <span class="main_h2">Manage your logins curely in one place</span>
