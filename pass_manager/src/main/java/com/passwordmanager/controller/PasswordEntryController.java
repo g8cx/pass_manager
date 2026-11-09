@@ -1,6 +1,6 @@
 package com.passwordmanager.controller;
 
-import com.passwordmanager.model.PasswordEntry;
+import com.passwordmanager.dto.PasswordEntryResponse;
 import com.passwordmanager.service.LoginService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,17 +25,17 @@ public class PasswordEntryController {
     }
 
     @GetMapping
-    public List<PasswordEntry> getAllEntries() {
+    public List<PasswordEntryResponse> getAllEntries() {
         return loginService.getAllEntries();
     }
 
     @GetMapping("/{id}")
-    public PasswordEntry getEntryById(@PathVariable Long id) {
+    public PasswordEntryResponse getEntryById(@PathVariable Long id) {
         return loginService.getEntryById(id);
     }
 
     @PutMapping("/{id}")
-    public PasswordEntry updateEntry(
+    public PasswordEntryResponse updateEntry(
             @PathVariable Long id,
             @RequestBody UpdatePasswordEntryRequest request) {
         return loginService.updateEntry(id, request);
@@ -47,7 +47,7 @@ public class PasswordEntryController {
     }
 
     @PostMapping
-    public PasswordEntry createPasswordEntry(@Valid @RequestBody CreatePasswordEntryRequest request){
+    public PasswordEntryResponse createPasswordEntry(@Valid @RequestBody CreatePasswordEntryRequest request){
         return loginService.createPasswordEntry(request);
     }
 
