@@ -1,0 +1,36 @@
+<template id="collection_item_template">
+  <li id="" class="tab_btn collection_btn_effects">
+    <div class="collection_content">
+
+      <a class="collection_a">
+        <img 
+          src="/src/assets/images/coll_img.png"
+          alt=""
+          class="collection_image"
+          data-role="image"
+        >
+
+        <span data-role="collection_name"></span>
+      </a>
+
+      <button
+        type="button" 
+        class="collection_settings"
+        aria-label="Найстройки коллекции"
+        data-action="settings"
+      >
+        <svg 
+          xmlns="http://www.w3.org/2000/svg"
+          width="24" height="24" viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-ellipsis preview-icon"
+        >
+          <circle cx="12" cy="12" r="1"/>
+          <circle cx="19" cy="12" r="1"/>
+          <circle cx="5" cy="12" r="1"/>
+        </svg>
+      </button>
+    </div>
+  </li>
+</template>

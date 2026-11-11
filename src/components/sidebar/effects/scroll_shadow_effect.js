@@ -1,7 +1,7 @@
 const collectionsList = document.querySelector('.collections_list');
 const navigation = document.querySelector('.collections_navigation');
 
-const updateScrollShadows = () => {
+export const updateScrollShadows = () => {
     const scrollTop = navigation.scrollTop;
     const maxScroll = navigation.scrollHeight - navigation.clientHeight;
 

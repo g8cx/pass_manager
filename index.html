@@ -3,16 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="../js/load_collections.js" defer></script>
-  <script src="../js/scroll_effector.js" defer></script>
-  <script src="../js/scroll_baraban_effector.js" defer></script>
-  <script src="../js/switch_collections.js" defer></script>
+  <script type="module" src="./src/components/main/main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Pacifico&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/css/styles.css">
-  <link rel="stylesheet" href="../styles/css/sidebar.css">
-  <link rel="stylesheet" href="../styles/css/work_place.css">
+  <link rel="stylesheet" href="./src/styles/css/styles.css">
+  <link rel="stylesheet" href="./src/styles/css/sidebar.css">
+  <link rel="stylesheet" href="./src/styles/css/work_place.css">
   <title>ProfitPassManager</title>
 </head>
 <body>
@@ -20,7 +17,7 @@
     <section class="main_data">
       <section class="account_data">
         <div class="user_image">
-          <img data-img="" src="../assets/images/user.png" alt="">
+          <img data-img="" src="./src/assets/images/user.png" alt="">
         </div>
         <div class="user_title">
           <p data-user="user.name" class="user_name">ivan1137</p>
@@ -30,19 +27,19 @@
 
       <section class="funtional_btn">
         <a class="func tab_btn btn_effects">
-          <img src="../assets/images/start.png" alt="">
+          <img src="./src/assets/images/start.png" alt="">
           <span>Get started</span>
         </a>
         <a class="func tab_btn btn_effects">
-          <img src="../assets/images/search.png" alt="">
+          <img src="./src/assets/images/search.png" alt="">
           <span>Search</span>
         </a>
         <a class="func tab_btn btn_effects">
-          <img src="../assets/images/notifications.png" alt="">
+          <img src="./src/assets/images/notifications.png" alt="">
           <span>Notifications</span>
         </a>
         <a id="active" class="func tab_btn btn_effects active">
-          <img src="../assets/images/login.png" alt="">
+          <img src="./src/assets/images/login.png" alt="">
           <span>Logins</span>
         </a>
       </section>
@@ -75,7 +72,7 @@
 
       <section class="settings_btn">
         <a class="tab_btn btn_effects">
-          <img src="../assets/images/settings.png" alt="">
+          <img src="./src/assets/images/settings.png" alt="">
           <span>Settings</span>
         </a>
       </section>
@@ -91,7 +88,7 @@
   <section class="work_place">
     <header class="header">Logins</header>
     <div class="main">
-      <img src="../assets/images/add_login.png" alt="" class="main_image">
+      <img src="./src/assets/images/add_login.png" alt="" class="main_image">
       <div class="main_text">
         <span class="main_h1">Starting adding logins</span>
         <span class="main_h2">Manage your logins curely in one place</span>
@@ -102,5 +99,6 @@
       </div>
     </div>
   </section>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 const navigator = document.querySelector('.collections_navigation');
 
-function updateWheelEffect() {
+export const updateWheelEffect=() => {
     const containerRect = navigator.getBoundingClientRect();
     const centerY = containerRect.top + containerRect.height / 2;
 
