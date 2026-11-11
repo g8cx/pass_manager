@@ -1,9 +1,15 @@
 package com.passwordmanager.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class UpdatePasswordEntryRequest {
+    @NotBlank(message = "Название не может быть пустым")
     private String title;
+    @NotBlank(message = "Сайт не может быть пустым")
     private String website;
+    @NotBlank(message = "Логин не может быть пустым")
     private String username;
+    @NotBlank(message = "Пароль не может быть пустым")
     private String encryptedPassword;
     private String notes;
 

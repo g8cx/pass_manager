@@ -37,7 +37,7 @@ public class PasswordEntryController {
     @PutMapping("/{id}")
     public PasswordEntryResponse updateEntry(
             @PathVariable Long id,
-            @RequestBody UpdatePasswordEntryRequest request) {
+            @Valid @RequestBody UpdatePasswordEntryRequest request) {
         return loginService.updateEntry(id, request);
     }
 

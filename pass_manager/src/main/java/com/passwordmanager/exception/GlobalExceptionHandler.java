@@ -6,6 +6,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -28,5 +30,19 @@ public class GlobalExceptionHandler {
         response.put("errors", errors);
         return response;
     }
+    @ExceptionHandler(ResponseStatusException.class)
+    public ResponseEntity<Map<String, Object>> handleResponseStatusException(
+            ResponseStatusException exception) {
 
+        Map<String, Object> response = new HashMap<>();
+
+        response.put("status", exception.getStatusCode().value());
+        response.put("message", exception.getReason() != null
+                ? exception.getReason()
+                : "Запрашиваемая запись не найдена");
+
+        return ResponseEntity
+                .status(exception.getStatusCode())
+                .body(response);
+    }
 }
