@@ -8,97 +8,99 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Pacifico&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/styles/css/styles.css">
+  <link rel="stylesheet" href="./src/styles/css/main.css">
   <link rel="stylesheet" href="./src/styles/css/sidebar.css">
   <link rel="stylesheet" href="./src/styles/css/work_place.css">
   <title>ProfitPassManager</title>
 </head>
 <body>
-  <section class="sidebar">
-    <section class="main_data">
-      <section class="account_data">
-        <div class="user_image">
-          <img data-img="" src="./src/assets/images/user.png" alt="">
-        </div>
-        <div class="user_title">
-          <p data-user="user.name" class="user_name">ivan1137</p>
-          <p data-user="user.email" class="user_email">ivan1137@gmail.com</p>
-        </div>
-      </section>
-
-      <section class="funtional_btn">
-        <a class="func tab_btn btn_effects">
-          <img src="./src/assets/images/start.png" alt="">
-          <span>Get started</span>
-        </a>
-        <a class="func tab_btn btn_effects">
-          <img src="./src/assets/images/search.png" alt="">
-          <span>Search</span>
-        </a>
-        <a class="func tab_btn btn_effects">
-          <img src="./src/assets/images/notifications.png" alt="">
-          <span>Notifications</span>
-        </a>
-        <a id="active" class="func tab_btn btn_effects active">
-          <img src="./src/assets/images/login.png" alt="">
-          <span>Logins</span>
-        </a>
-      </section>
-
-      <section class="collections">
-        <div class="collection_title_block">
-          <span class="collection_title">COLLECTIONS</span>
-          <button>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg"
-              width="24" height="24" viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-plus preview-icon"
-            >
-              <path d="M5 12h14"/>
-              <path d="M12 5v14"/>
-            </svg>
-          </button>
-        </div>
-        <nav>
-          <div class="collections_list">
-            <ul id="collections_navigation" class="collections_navigation">
-            </ul>
+  <main class="main_container">
+    <section class="sidebar">
+      <section class="main_data">
+        <section class="account_data">
+          <div class="user_image">
+            <img data-img="" src="./src/assets/images/user.png" alt="">
           </div>
-        </nav>
+          <div class="user_title">
+            <p data-user="user.name" class="user_name">ivan1137</p>
+            <p data-user="user.email" class="user_email">ivan1137@gmail.com</p>
+          </div>
+        </section>
+
+        <section class="funtional_btn">
+          <a class="func tab_btn btn_effects">
+            <img src="./src/assets/images/start.png" alt="">
+            <span>Get started</span>
+          </a>
+          <a class="func tab_btn btn_effects">
+            <img src="./src/assets/images/search.png" alt="">
+            <span>Search</span>
+          </a>
+          <a class="func tab_btn btn_effects">
+            <img src="./src/assets/images/notifications.png" alt="">
+            <span>Notifications</span>
+          </a>
+          <a id="active" class="func tab_btn btn_effects active">
+            <img src="./src/assets/images/login.png" alt="">
+            <span>Logins</span>
+          </a>
+        </section>
+
+        <section class="collections">
+          <div class="collection_title_block">
+            <span class="collection_title">COLLECTIONS</span>
+            <button>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-plus preview-icon"
+              >
+                <path d="M5 12h14"/>
+                <path d="M12 5v14"/>
+              </svg>
+            </button>
+          </div>
+          <nav>
+            <div class="collections_list">
+              <ul id="collections_navigation" class="collections_navigation">
+              </ul>
+            </div>
+          </nav>
+        </section>
+
+        <div class="settings_line"></div>
+
+        <section class="settings_btn">
+          <a class="tab_btn btn_effects">
+            <img src="./src/assets/images/settings.png" alt="">
+            <span>Settings</span>
+          </a>
+        </section>
       </section>
 
-      <div class="settings_line"></div>
-
-      <section class="settings_btn">
-        <a class="tab_btn btn_effects">
-          <img src="./src/assets/images/settings.png" alt="">
-          <span>Settings</span>
-        </a>
-      </section>
+      <footer class="footer">
+        <div class="settings_line"></div>
+        <span>© ProfitEaters 2026</span>  
+      </footer>
     </section>
 
-    <footer class="footer">
-      <div class="settings_line"></div>
-      <span>© ProfitEaters 2026</span>  
-    </footer>
-  </section>
 
-
-  <section class="work_place">
-    <header class="header">Logins</header>
-    <div class="main">
-      <img src="./src/assets/images/add_login.png" alt="" class="main_image">
-      <div class="main_text">
-        <span class="main_h1">Starting adding logins</span>
-        <span class="main_h2">Manage your logins curely in one place</span>
+    <section class="work_place">
+      <header class="header">Logins</header>
+      <div class="main">
+        <img src="./src/assets/images/add_login.png" alt="" class="main_image">
+        <div class="main_text">
+          <span class="main_h1">Starting adding logins</span>
+          <span class="main_h2">Manage your logins curely in one place</span>
+        </div>
+        <div class="start_buttons">
+          <button>Import logins</button>
+          <button>Add logins</button>
+        </div>
       </div>
-      <div class="start_buttons">
-        <button>Import logins</button>
-        <button>Add logins</button>
-      </div>
-    </div>
-  </section>
-
+    </section>
+  </main>
 </body>
 </html>

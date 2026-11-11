@@ -204,7 +204,7 @@
   background: #191D21;
 }
 .sidebar .main_data .collections .collections_navigation::-webkit-scrollbar-thumb {
-  background: rgba(16, 227, 255, 0.9843137255) 9;
+  background: #10e3ff;
   border-radius: 10px;
 }
 .sidebar .main_data .collections .collections_navigation::-webkit-scrollbar-thumb:hover {

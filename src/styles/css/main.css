@@ -1,0 +1,27 @@
+body {
+  color: #FFFFFF;
+}
+
+.main_container {
+  margin: 0;
+  padding: 40px 70px 50px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  gap: 45px;
+  overflow: hidden;
+  background-color: #191D21;
+}
+.main_container a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFFFFF;
+  -webkit-user-drag: none;
+}

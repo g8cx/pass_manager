@@ -3,43 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./auth.css">
+  <link rel="stylesheet" href="../styles/css/styles.css">
   <title>Authorization</title>
 </head>
 <body>
   <main class="auth_container">
 
-    <section class="login_form">
-      <div class="login_container">
-        <div class="login_text">
-          <span>Welcome back</span>
-          <span>Sing in your account</span>
-        </div>
-        <form action="">
-          <div class="login_inputs">
-            <input type="text" placeholder="Login">
-            <input type="password" placeholder="Password">
+    <div class="form_wrapper">
+      
+      <section class="login_form">
+        <div class="login_container">
+          <div class="login_text">
+            <span class="text_h1">Welcome back!</span>
+            <span class="text_h2">Sing in your account</span>
           </div>
-          <button class="login_btn">Sing in</button>
-        </form>
-      </div>
-    </section>
+          <form action="">
+            <div class="login_inputs">
+              <input type="text" name="login" placeholder="Login" class="login_input">
+              <div class="login_password_container">
+                <input type="password" name="password" placeholder="Password" class="login_input">
+                <input type="checkbox" id="login_toggle_password">
+                <label for="login_toggle_password" class="login_pass_state">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="24" height="24" viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="eye_open">
+                    <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="eye_close">
+                    <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/>
+                    <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/>
+                    <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/>
+                    <path d="m2 2 20 20"/>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <button class="login_btn">Sing in</button>
+          </form>
+        </div>
+      </section>
 
-    <section class="register_form">
-      <div class="register_container">
-        <div class="register_text">
-          <span>Create your account</span>
-          <span>Welcome to Profit Eaters</span>
-        </div>
-        <form action="">
-          <div class="register_inputs">
-            <input type="text" placeholder="Login">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
+      <section class="register_form">
+        <div class="register_container">
+          <div class="register_text">
+            <span class="text_h1">Create your account</span>
+            <span class="text_h2">Welcome to Profit Eaters</span>
           </div>
-          <button class="register_btn">Sing up</button>
-        </form>
-      </div>
-    </section>
+          <form action="">
+            <div class="register_inputs">
+              <input type="text" name="login" placeholder="Login" class="register_input">
+              <input type="email" name="mail" placeholder="Email" class="register_input">
+              <div class="register_password_container">
+                <input type="password" name="password" placeholder="Password" class="register_input">
+                <input type="checkbox" id="register_toggle_password">
+                <label for="register_toggle_password" class="register_pass_state">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="24" height="24" viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="eye_open">
+                    <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="eye_close">
+                    <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/>
+                    <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/>
+                    <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/>
+                    <path d="m2 2 20 20"/>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <button class="register_btn">Sing up</button>
+          </form>
+        </div>
+      </section>
+
+    </div>
 
   </main>
 </body>
