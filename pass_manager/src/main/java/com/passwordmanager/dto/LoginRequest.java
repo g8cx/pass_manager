@@ -1,19 +1,28 @@
+
 package com.passwordmanager.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Email;
+
 public class LoginRequest {
-    private String username;
-    private String website;
 
-    public LoginRequest(String username, String website){
-        this.username = username;
-        this.website = website;
+    @NotBlank(message = "Email не может быть пустым")
+    @Email(message = "Некорректный формат email")
+    private String email;
+
+    @NotBlank(message = "Пароль не может быть пустым")
+    private String password;
+
+    public LoginRequest(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
-    public String getUsername(){
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public String getWebsite(){
-        return website;
+    public String getPassword() {
+        return password;
     }
 }

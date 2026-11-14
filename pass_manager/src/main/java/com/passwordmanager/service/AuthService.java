@@ -1,5 +1,6 @@
 package com.passwordmanager.service;
 
+import com.passwordmanager.dto.LoginRequest;
 import com.passwordmanager.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -37,5 +38,24 @@ public class AuthService {
         String token = jwtService.generateToken(savedUser.getId());
         AuthResponse authResponse = new AuthResponse(token, "Bearer");
         return authResponse;
+    }
+
+    public AuthResponse login(LoginRequest request) {
+        User user = userRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.UNAUTHORIZED,
+                        "Неверный email или пароль"
+                ));
+        if (!passwordEncoder.matches(
+                request.getPassword(),
+                user.getPasswordHash()
+        )) {
+            throw new ResponseStatusException(
+                    HttpStatus.UNAUTHORIZED,
+                    "Неверный email или пароль"
+            );
+        }
+        String token = jwtService.generateToken(user.getId());
+        return new AuthResponse(token, "Bearer");
     }
 }

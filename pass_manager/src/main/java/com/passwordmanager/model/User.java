@@ -1,16 +1,14 @@
 package com.passwordmanager.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
+import java.util.UUID;
 
 @Entity
+@Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
     @Column(nullable = false, unique = true)
     private String nickname;
     @Column(nullable = false, unique = true)
@@ -28,7 +26,7 @@ public class User {
 
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
