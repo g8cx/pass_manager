@@ -17,7 +17,7 @@ body {
   height: 100dvh;
   gap: 45px;
   overflow: hidden;
-  background-color: #191D21;
+  background: #191D21;
 }
 .main_container a {
   cursor: pointer;

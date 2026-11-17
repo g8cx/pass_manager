@@ -38,8 +38,8 @@
           flex: 1;
   min-width: 0;
   min-height: 0;
-  background-color: rgba(33, 37, 41, 0.6);
-  border: 2px solid rgba(16, 227, 255, 0.7254901961);
+  background-color: #272727;
+  border: 2px solid #10e3ff;
   border-radius: 20px;
 }
 .work_place .main .main_image {
@@ -69,7 +69,7 @@
   font-size: 14px;
   line-height: 8px;
 }
-.work_place .main .start_buttons {
+.work_place .main .main_button_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,14 +86,14 @@
   padding-top: 40px;
   gap: 30px;
 }
-.work_place .main .start_buttons button {
+.work_place .main .main_button_container .add_button {
   width: 200px;
   height: 36px;
-  background-color: rgba(16, 227, 255, 0.7254901961);
+  background-color: #10e3ff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
-.work_place .main .start_buttons button:hover {
+.work_place .main .main_button_container .add_button:hover {
   background-color: rgba(16, 227, 255, 0.9607843137);
 }

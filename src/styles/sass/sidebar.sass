@@ -89,6 +89,9 @@
           flex: 1
           color: v.$text-additional-color-dark
 
+        .collection_title_icon
+          color: v.$text-color-dark
+
         button
           cursor: pointer
 
@@ -193,12 +196,10 @@
               justify-content: flex-start
               align-items: center
               gap: 10px
-              // padding-right: 10px
 
               .collection_image
                 width: 20px
                 height: 20px
-                flex-shrink: 0
 
             .collection_setting
               display: flex
@@ -208,9 +209,8 @@
               font-size: 25px
               cursor: pointer
 
-              img
-                width: 30px
-                height: 30px
+              .collection_settings_icon
+                color: v.$text-color-dark
 
     // Разделитель и настройки
     .settings_line

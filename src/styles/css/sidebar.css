@@ -143,6 +143,9 @@
           flex: 1;
   color: #C0C0C0;
 }
+.sidebar .main_data .collections .collection_title_block .collection_title_icon {
+  color: #FFFFFF;
+}
 .sidebar .main_data .collections .collection_title_block button {
   cursor: pointer;
 }
@@ -286,8 +289,6 @@
 .sidebar .main_data .collections .collections_navigation li .collection_content .collection_a .collection_image {
   width: 20px;
   height: 20px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 .sidebar .main_data .collections .collections_navigation li .collection_content .collection_setting {
   display: -webkit-box;
@@ -304,9 +305,8 @@
   font-size: 25px;
   cursor: pointer;
 }
-.sidebar .main_data .collections .collections_navigation li .collection_content .collection_setting img {
-  width: 30px;
-  height: 30px;
+.sidebar .main_data .collections .collections_navigation li .collection_content .collection_setting .collection_settings_icon {
+  color: #FFFFFF;
 }
 .sidebar .main_data .settings_line {
   width: 100%;
