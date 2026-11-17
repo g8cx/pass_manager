@@ -22,7 +22,17 @@ body {
   height: 100vh;
   background: radial-gradient(circle at 10% 20%, rgba(248, 40, 255, 0.35), transparent 40%), radial-gradient(circle at 90% 80%, rgba(255, 162, 40, 0.25), transparent 40%), #191D21;
 }
+.auth_container #stars_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
 .auth_container .login_form {
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,7 +63,7 @@ body {
   padding: 15px;
   width: 500px;
   height: 700px;
-  background-color: rgba(27, 27, 27, 0.6745098039);
+  background-color: rgba(27, 27, 27, 0.6235294118);
   backdrop-filter: blur(10xp);
   border: 1px solid #C0C0C0;
   border-bottom-left-radius: 12px;
@@ -230,6 +240,7 @@ body {
   cursor: pointer;
 }
 .auth_container .register_form {
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,7 +272,7 @@ body {
   width: 500px;
   height: 700px;
   gap: 25px;
-  background-color: rgba(27, 27, 27, 0.6745098039);
+  background-color: rgba(27, 27, 27, 0.6235294118);
   backdrop-filter: blur(10xp);
   border: 1px solid #C0C0C0;
   border-bottom-right-radius: 12px;

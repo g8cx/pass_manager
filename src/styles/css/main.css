@@ -19,9 +19,21 @@ body {
   overflow: hidden;
   background: #191D21;
 }
+.main_container #stars_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
 .main_container a {
   cursor: pointer;
   text-decoration: none;
   color: #FFFFFF;
   -webkit-user-drag: none;
+}
+.main_container * {
+  z-index: 1;
 }
