@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import com.passwordmanager.dto.CreatePasswordEntryRequest;
 import org.springframework.web.bind.annotation.PostMapping;
 import jakarta.validation.Valid;
+import java.security.Principal;
 
 @RestController
 @RequestMapping("/entries")
@@ -25,30 +26,41 @@ public class PasswordEntryController {
     }
 
     @GetMapping
-    public List<PasswordEntryResponse> getAllEntries() {
-        return loginService.getAllEntries();
+    public List<PasswordEntryResponse> getAllEntries(Principal principal) {
+        return loginService.getAllEntries(principal);
     }
 
     @GetMapping("/{id}")
-    public PasswordEntryResponse getEntryById(@PathVariable Long id) {
-        return loginService.getEntryById(id);
+    public PasswordEntryResponse getEntryById(
+            @PathVariable Long id,
+            Principal principal
+    ) {
+        return loginService.getEntryById(id, principal);
     }
 
     @PutMapping("/{id}")
     public PasswordEntryResponse updateEntry(
             @PathVariable Long id,
-            @Valid @RequestBody UpdatePasswordEntryRequest request) {
-        return loginService.updateEntry(id, request);
+            @Valid @RequestBody UpdatePasswordEntryRequest request,
+            Principal principal
+    ) {
+        return loginService.updateEntry(id, request, principal);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteEntry(@PathVariable Long id){
-        loginService.deleteEntry(id);
+    public void deleteEntry(
+            @PathVariable Long id,
+            Principal principal
+    ) {
+        loginService.deleteEntry(id, principal);
     }
 
     @PostMapping
-    public PasswordEntryResponse createPasswordEntry(@Valid @RequestBody CreatePasswordEntryRequest request){
-        return loginService.createPasswordEntry(request);
+    public PasswordEntryResponse createPasswordEntry(
+            @Valid @RequestBody CreatePasswordEntryRequest request,
+            Principal principal
+    ) {
+        return loginService.createPasswordEntry(request, principal);
     }
 
 }
