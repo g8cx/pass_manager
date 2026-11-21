@@ -1,0 +1,99 @@
+.work_place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+  min-height: 0;
+  gap: 15px;
+}
+.work_place .header {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 35px;
+  font-weight: bold;
+}
+.work_place .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+  min-height: 0;
+  background-color: #272727;
+  border: 2px solid #10e3ff;
+  border-radius: 20px;
+}
+.work_place .main .main_image {
+  width: 250px;
+  height: 250px;
+}
+.work_place .main .main_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+.work_place .main .main_text .main_h1 {
+  font-size: 36px;
+}
+.work_place .main .main_text .main_h2 {
+  font-size: 14px;
+  line-height: 8px;
+}
+.work_place .main .main_button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 40px;
+  gap: 30px;
+}
+.work_place .main .main_button_container .add_button {
+  width: 200px;
+  height: 36px;
+  background-color: #10e3ff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.work_place .main .main_button_container .add_button:hover {
+  background-color: rgba(16, 227, 255, 0.9607843137);
+}

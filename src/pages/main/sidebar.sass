@@ -1,0 +1,268 @@
+@use 'variables' as v
+  
+.sidebar
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  flex: 0 0 300px
+  min-height: 0
+  font-weight: bold
+
+  // Основное содержимое sidebar
+  .main_data
+    display: flex
+    flex-direction: column
+
+    // Данные аккаунта
+    .account_data
+      display: flex
+      flex-direction: row
+      justify-content: start
+      align-items: center
+      gap: 16px
+      margin-bottom: 30px
+
+      .user_image
+        display: flex
+        flex: 0 0 40px
+        width: 40px
+        height: 40px
+        border-radius: 10px
+        background-color: v.$backgound-workplace-dark
+
+      .user_title
+        .user_email
+          font-size: 12px
+          color: v.$text-additional-color-dark
+
+    // Функциональные кнопки
+    .funtional_btn
+      display: flex
+      flex-direction: column
+      gap: 10px
+      margin-bottom: 25px
+
+      .func
+        display: flex
+        flex-direction: row
+        align-items: center
+        min-height: 30px
+        height: auto
+        padding-left: 8px
+        gap: 8px
+
+        &.active
+            background: v.$button-active-dark
+            border-radius: 10px
+            border: none
+
+        img
+          width: 20px
+          height: 20px
+          flex-shrink: 0
+
+    // Коллекции
+    .collections
+      width: 100%
+      min-width: 0
+
+      button
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: transparent
+        border: none
+        line-height: 1
+
+      .collection_title_block
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        gap: 25px
+        margin-bottom: 18px
+        padding-right: 25px
+
+        .collection_title
+          display: flex
+          justify-content: center
+          flex: 1
+          color: v.$text-additional-color-dark
+
+        .collection_title_icon
+          color: v.$text-color-dark
+
+        button
+          cursor: pointer
+
+          img
+            width: 20px
+            height: 20px
+
+      .collections_list
+        position: relative
+        min-height: 0
+
+        &::before,
+        &::after
+          content: ""
+          position: absolute
+          left: 0
+          right: 8px
+          height: 25px
+          z-index: 2
+          pointer-events: none
+          opacity: 0
+          transition: opacity 0.2s ease
+
+        // Тень сверху
+        &::before
+          top: 0
+          background: linear-gradient(to bottom, v.$background-dark, transparent)
+
+        // Тень снизу
+        &::after
+          bottom: 0
+          background: linear-gradient(to top, v.$background-dark, transparent)
+
+        &.has-content-above::before
+          opacity: 1
+
+        &.has-content-below::after
+          opacity: 1
+
+      .collections_navigation
+        display: flex
+        flex-direction: column
+        padding: 0 12px 15px 8px
+        max-height: 300px
+        overflow-y: auto
+        overflow-x: hidden
+        gap: 15px
+        list-style: none
+
+        // Скроллбар
+        &::-webkit-scrollbar
+          width: 8px
+
+        &::-webkit-scrollbar-track
+          background: v.$background-dark
+
+        &::-webkit-scrollbar-thumb
+          background: v.$accent-color-dark
+          border-radius: 10px
+
+        &::-webkit-scrollbar-thumb:hover
+          background: v.$accent-color-hover-dark
+
+        &::-webkit-scrollbar-button
+          display: none
+          width: 0
+          height: 0
+
+        // Элементы списка
+        li
+          display: flex
+          justify-content: start
+          align-items: center
+          padding: 5px 12px
+
+          &.is-centered
+            filter: drop-shadow(0 2px 5px v.$baraban-shadowdrop-dark)
+
+          &.active
+            background: v.$button-active-dark
+            border: none
+            border-radius: 10px
+        
+          .collection_content
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            gap: 10px
+            // Эффект барабана
+            transform: scale(var(--item-scale, 0.9))
+            opacity: var(--item-opacity, 0.7)
+            transition: transform 0.12s ease-out, opacity 0.12s ease-out
+            transform-origin: center center
+            will-change: transform
+            .collection_a
+              display: flex
+              flex: 1
+              min-width: 0
+              flex-direction: row
+              justify-content: flex-start
+              align-items: center
+              gap: 10px
+
+              .collection_image
+                width: 20px
+                height: 20px
+
+            .collection_setting
+              display: flex
+              flex-shrink: 0
+              justify-content: center
+              align-items: center
+              font-size: 25px
+              cursor: pointer
+
+              .collection_settings_icon
+                color: v.$text-color-dark
+
+    // Разделитель и настройки
+    .settings_line
+      width: 100%
+      height: 3px
+      margin: 20px 0
+      border-radius: 10px
+      background-color: v.$button-active-dark
+
+    .settings_btn
+      min-height: 30px
+      height: auto
+      a
+        padding-left: 8px
+        display: flex
+        justify-content: start
+        align-items: center
+        height: 100%
+        gap: 10px
+
+        &.active
+          background: v.$button-active-dark
+          border-radius: 10px
+          border: none
+        
+        img
+          width: 20px
+          height: 20px
+
+  // Нижняя часть sidebar
+  .footer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .settings_line
+      width: 100%
+      height: 3px
+      margin: 20px 0
+      border-radius: 10px
+      background-color: v.$button-active-dark
+
+// Эффекты кнопок
+.btn_effects
+  border: 2px solid transparent
+  border-radius: 10px
+  &:hover
+    border-color: v.$button-hover-dark
+
+.collection_btn_effects
+  border: 2px solid transparent
+  border-radius: 10px
+  &:hover
+    border-color: v.$button-hover-dark

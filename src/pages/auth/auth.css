@@ -1,0 +1,432 @@
+body {
+  color: #FFFFFF;
+}
+
+.auth_container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle at 10% 20%, rgba(248, 40, 255, 0.35), transparent 40%), radial-gradient(circle at 90% 80%, rgba(255, 162, 40, 0.25), transparent 40%), #191D21;
+}
+.auth_container #stars_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.auth_container .login_form {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+}
+.auth_container .login_form .login_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  width: 500px;
+  height: 700px;
+  background-color: rgba(27, 27, 27, 0.6235294118);
+  backdrop-filter: blur(10xp);
+  border: 1px solid #C0C0C0;
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.auth_container .login_form .login_container .back_button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.auth_container .login_form .login_container .back_button_container a {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.auth_container .login_form .login_container .login_action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 25px;
+}
+.auth_container .login_form .login_container .login_action .login_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+.auth_container .login_form .login_container .login_action .login_text .text_h1 {
+  font-size: 30px;
+}
+.auth_container .login_form .login_container .login_action .login_text .text_h2 {
+  font-size: 15px;
+}
+.auth_container .login_form .login_container .login_action form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  gap: 20px;
+}
+.auth_container .login_form .login_container .login_action form .login_inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+.auth_container .login_form .login_container .login_action form .login_inputs .login_input {
+  width: 100%;
+  height: 35px;
+  padding: 5px 10px;
+  border: 2px solid #C0C0C0;
+  border-radius: 8px;
+  color: #FFFFFF;
+  background: transparent;
+  font-size: 15px;
+}
+.auth_container .login_form .login_container .login_action form .login_inputs .login_input:focus {
+  border-color: rgba(16, 227, 255, 0.9607843137);
+  outline: none;
+}
+.auth_container .login_form .login_container .login_action form .login_inputs .login_password_container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.auth_container .login_form .login_container .login_action form .login_inputs .login_password_container #login_toggle_password {
+  display: none;
+}
+.auth_container .login_form .login_container .login_action form .login_inputs .login_password_container .login_pass_state {
+  position: absolute;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+.auth_container .login_form .login_container .login_action form .login_inputs .login_password_container .login_pass_state svg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+.auth_container .login_form .login_container .login_action form .login_btn {
+  width: 45%;
+  height: 30px;
+  background-color: #10e3ff;
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+.auth_container .login_form .login_container .login_action .login_swap_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+.auth_container .login_form .login_container .login_action .login_swap_form .login_swap_form_text {
+  font-size: 15px;
+}
+.auth_container .login_form .login_container .login_action .login_swap_form .login_swap_form_link {
+  color: #10e3ff;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.auth_container .register_form {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+}
+.auth_container .register_form .register_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  width: 500px;
+  height: 700px;
+  gap: 25px;
+  background-color: rgba(27, 27, 27, 0.6235294118);
+  backdrop-filter: blur(10xp);
+  border: 1px solid #C0C0C0;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.auth_container .register_form .register_container .register_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+.auth_container .register_form .register_container .register_text .text_h1 {
+  font-size: 30px;
+}
+.auth_container .register_form .register_container .register_text .text_h2 {
+  font-size: 15px;
+}
+.auth_container .register_form .register_container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  gap: 20px;
+}
+.auth_container .register_form .register_container form .register_inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+.auth_container .register_form .register_container form .register_inputs .register_input {
+  width: 100%;
+  height: 35px;
+  padding: 5px 10px;
+  border: 2px solid #C0C0C0;
+  border-radius: 8px;
+  color: #FFFFFF;
+  background: transparent;
+  font-size: 15px;
+}
+.auth_container .register_form .register_container form .register_inputs .register_input:focus {
+  border-color: rgba(16, 227, 255, 0.9607843137);
+  outline: none;
+}
+.auth_container .register_form .register_container form .register_inputs .register_password_container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.auth_container .register_form .register_container form .register_inputs .register_password_container #register_toggle_password {
+  display: none;
+}
+.auth_container .register_form .register_container form .register_inputs .register_password_container .register_pass_state {
+  position: absolute;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+.auth_container .register_form .register_container form .register_inputs .register_password_container .register_pass_state svg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+.auth_container .register_form .register_container form .register_btn {
+  width: 45%;
+  height: 30px;
+  background-color: #10e3ff;
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+.auth_container .register_form .register_container .register_swap_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+.auth_container .register_form .register_container .register_swap_form .register_swap_form_text {
+  font-size: 15px;
+}
+.auth_container .register_form .register_container .register_swap_form .register_swap_form_link {
+  color: #10e3ff;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.eye_open {
+  display: none;
+}
+
+.eye_close {
+  display: inline-block;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked + label .eye_open {
+  display: inline-block;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked + label .eye_close {
+  display: none;
+}
