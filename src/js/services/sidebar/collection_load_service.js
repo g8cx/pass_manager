@@ -1,6 +1,6 @@
 export async function getCollections() {
   const response = await fetch(
-    '/src/data/collections.json'
+      '/data/collections.json'
   );
 
   if (!response.ok) {

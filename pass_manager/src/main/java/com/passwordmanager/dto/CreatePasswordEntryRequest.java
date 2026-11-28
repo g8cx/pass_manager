@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 public class CreatePasswordEntryRequest {
     @NotBlank(message = "Название записи обязательно!")
     private String title;
-    @NotBlank(message = "Названиек вебсайта обязательно!")
+    @NotBlank(message = "Название вебсайта обязательно!")
     private String website;
     @NotBlank(message = "Никнейм обязателен!")
     private String username;

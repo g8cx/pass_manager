@@ -1,4 +1,4 @@
-import { apiRequest } from './api.js';
+import { apiRequest } from '../api.js';
 
 // Авторизация
 export async function loginUser(email, password) {
